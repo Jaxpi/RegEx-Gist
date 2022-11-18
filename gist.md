@@ -6,7 +6,7 @@ A regular expression - or RegEx - "is a sequence of characters that defines a se
 
 A regex for matching an email ensures that the charcters entered by a user follow the format of a valid email address. I will explain the different components of this regex and how it is used.
 This is an example of a regex for matching an email:
-/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 ## Table of Contents
 
@@ -29,7 +29,7 @@ All regex's are wrapped in "/" characters because it is a literal. Each regex is
 ### Anchors
 
 To begin a regex you must use a "^" character. This lets the expression know that any string match will begin with the specific characters or range that follows the "^". To end a regex you must use a "$" character so the expression knows that the string to match must end with that specific character or range. In the case of the code below, everything inside the code must match.
-/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ This has a "^" right after the first slash and a "$" right before the end slash, so it is including everything.
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` This has a "^" right after the first slash and a "$" right before the end slash, so it is including everything.
 
 ### Quantifiers
 
@@ -72,7 +72,7 @@ Capturing is a way to treat multiple characters as a single unit.
 ### Bracket Expressions
 
 Bracket expressions are used to represent a range of characters. Inside the bracket you can have multiple chracters and the regex will look for a match to any of them. If you put a hyphen between any two letters or any two numbers the regex will include all letters or numbers in between as well. 
-/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 In the code above, the first character(s) can be any letter from a-z, any number from 0-9, an underscore, a backslash, a period, and/or a hyphen. The "+" lets the expression know that it can be more than one. After the "@" the next character(s) can contain any number (/d is the same as [0-9] - as we learned in the character classes section above), any letter a-z, and/or a period and/or a hyphen. Again the "+" lets the expression know it can be more than one. Then there will be a period, and following that will be any letter a-z and/or a period. The {2,6} is one of the quantifiers described above.
 
 ### Greedy and Lazy Match
@@ -82,7 +82,7 @@ In the quantifiers section above we saw how a curly brace quanitifer can set a r
 ### Boundaries
 
 The boundaries that we spoke about at the beginning (the "^" and the "$") let the regex know where to begin and end matching, but what if you want to use those as characters? To include these in the string you must use the escape syntax - which is preceeding the chracter with a backslash. In our example code for matching an email we can include the "$" character in our string by writing it this way:
-/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ - notice in the first grouping of characters we have \$ included to allow that chracter to be included without ending the regex (making it a literal and not a special).
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` - notice in the first grouping of characters we have \$ included to allow that chracter to be included without ending the regex (making it a literal and not a special).
 
 ### Back-references
 
