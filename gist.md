@@ -81,7 +81,7 @@ In the quantifiers section above we saw how a curly brace quanitifer can set a r
 
 ### Boundaries
 
-The boundaries that we spoke about at the beginning (the "^" and the "$") let the regex know where to begin and end matching, but what if you want to use those as characters? To include these in the string you must use the escape syntax - which is preceeding the chracter with a backslash. In our example code for matching an email we can include the "$" character in our string by writing it this way:
+The boundaries that we spoke about at the beginning `(the "^" and the "$")` let the regex know where to begin and end matching, but what if you want to use those as characters? To include these in the string you must use the escape syntax - which is preceeding the chracter with a backslash. In our example code for matching an email we can include the "$" character in our string by writing it this way:
 `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` - notice in the first grouping of characters we have \$ included to allow that chracter to be included without ending the regex (making it a literal and not a special).
 
 ### Back-references
