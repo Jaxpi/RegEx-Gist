@@ -28,7 +28,7 @@ All regex's are wrapped in "/" characters because it is a literal. Each regex is
 
 ### Anchors
 
-To begin a regex you must use a "^" character. This lets the expression know that any string match will begin with the specific characters or range that follows the "^". To end a regex you must use a "$" character so the expression knows that the string to match must end with that specific character or range. In the case of the code below, everything inside the code must match.
+To begin a regex you must use a "^" character. This lets the expression know that any string match will begin with the specific characters or range that follows the "^". To end a regex you must use a `"$"` character so the expression knows that the string to match must end with that specific character or range. In the case of the code below, everything inside the code must match.
 `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` This has a "^" right after the first slash and a "$" right before the end slash, so it is including everything.
 
 ### Quantifiers
@@ -81,7 +81,7 @@ In the quantifiers section above we saw how a curly brace quanitifer can set a r
 
 ### Boundaries
 
-The boundaries that we spoke about at the beginning `(the "^" and the "$")` let the regex know where to begin and end matching, but what if you want to use those as characters? To include these in the string you must use the escape syntax - which is preceeding the chracter with a backslash. In our example code for matching an email we can include the "$" character in our string by writing it this way:
+The boundaries that we spoke about at the beginning `(the "^" and the "$")` let the regex know where to begin and end matching, but what if you want to use those as characters? To include these in the string you must use the escape syntax - which is preceeding the chracter with a backslash. In our example code for matching an email we can include the `"$"` character in our string by writing it this way:
 `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` - notice in the first grouping of characters we have \$ included to allow that chracter to be included without ending the regex (making it a literal and not a special).
 
 ### Back-references
