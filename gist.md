@@ -46,4 +46,5 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+
+Jackson Impellizeri is a student at Columbia University learning to become a full-stack software engineer. He is eager to learn as much as he can and excel in a new field. To view his public repositories and projects please visit https://github.com/Jaxpi.
